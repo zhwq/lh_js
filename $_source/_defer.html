@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jquery defer</title>
+    <meta charset="utf-8"/>
+    <script src="jsLib/jquery-1.5.2.js"></script>
+    <style>
+        .defer-show {
+            clear:both;
+            display:block;
+            position:absolute;
+            left:20px;
+            top:30px;
+            height:30px;
+            width:40px;
+            background-color:#334455;
+        }
+        body>div:nth-child(1) {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="defer-show" id="deferShow">
+
+</div>
+<script>
+    function showDiv() {
+        var _defer = $.Deferred();
+        $( "#deferShow" ).fadeIn( 1000, _defer.resolve );
+        return _defer.promise();
+    };
+    function getData() {
+        $.get("data/per.json").success(function(data){
+            console.log( "ajax-" + ( data ) );
+        });
+    };
+    $.when( getData(), showDiv()).then( function( ) {
+        console.log( "when--then" );
+    } );
+</script>
+</body>
+</html>
+        <!--
+        http://api.jquery.com/category/deferred-object/
+        http://www.erichynds.com/jquery/using-deferreds-in-jquery/
+        http://www.erichynds.com/javascript/a-recursive-settimeout-pattern/
+        wiki.commonjs.org/wiki/Promises/A
+        http://jaubourg.net/
+        -->

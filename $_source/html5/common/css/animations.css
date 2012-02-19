@@ -1,0 +1,14 @@
+/*animation http://www.modernizr.com*/
+@-webkit-keyframes rotatein {
+	  0% { -webkit-transform: rotate(0); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotateout {
+	  0% { -webkit-transform: rotate(0); }
+	100% { -webkit-transform: rotate(-360deg); }
+}
+
+.banner:focus .logo,
+.banner:hover .logo {
+	-webkit-animation: rotatein 1s ease-in-out;
+}

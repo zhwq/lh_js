@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>导航菜单1-casMenu（仿http://www.html5mobi.com/）</title>
+    <meta charset="utf-8"/>
+    <link href="../common/css/base.css" rel="stylesheet"/>
+    <style>
+        body>div {
+            margin-top:20px;
+        }
+        #nav {
+            clear:both;
+            display:block;
+            width:100%;
+            height:49px;
+            line-height:49px;
+            border-radius:5px 5px;
+            -webkit-border-radius:5px 5px;
+            -moz-border-radius:5px 5px;
+            border:1px solid #b4b4b4;
+            background-color:#6DB4D5;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#88c2dc), to(#51a6cd));
+            background-image: -webkit-linear-gradient(top, #88c2dc, #51a6cd);
+            background-image:    -moz-linear-gradient(top, #88c2dc, #51a6cd);
+            background-image:     -ms-linear-gradient(top, #88c2dc, #51a6cd);
+            background-image:      -o-linear-gradient(top, #88c2dc, #51a6cd);
+            background-image:         linear-gradient(to bottom, #88c2dc, #51a6cd);
+        }
+        #nav>ul.topMenu {
+            float:left;
+        }
+        #nav>ul.topMenu>li {
+            float:left;
+            padding-right:10px;
+            width:30px;
+        }
+        #nav>ul.topMenu>li>a {
+        }
+        #nav>ul.topMenu>li>ul {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul class="topMenu">
+            <li><a href="#">菜单1</a></li>
+            <li><a href="#">菜单1</a></li>
+            <li><a href="#">菜单1</a>
+                <ul>
+                    <li>子菜单1</li><!--nth-child(1)-->
+                    <li>子菜单2</li>
+                    <li>子菜单3</li>
+                    <li>子菜单4</li>
+                    <li>子菜单5</li>
+                </ul>
+            </li>
+        </ul>
+    </div><!--/菜单容器-->
+</body>
+</html>
