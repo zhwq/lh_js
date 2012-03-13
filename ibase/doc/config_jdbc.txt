@@ -1,0 +1,3 @@
+jdbc方式连接oracle10g
+1.jar库文件(jdbc14.jar)
+2.配置第三方jar包到外部库文件
